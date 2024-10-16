@@ -9,11 +9,11 @@ export const Header = () => {
         <header className={classes.header}>
             <div className={classes.container}>
                 <NavLink to="/" className={getActiveClass}>
-                    Home
+                    ToDo
                 </NavLink>
 
-                <NavLink to="/todo" className={getActiveClass}>
-                    ToDo
+                <NavLink to="/list" className={getActiveClass}>
+                    List
                 </NavLink>
             </div>
         </header>
