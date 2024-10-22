@@ -1,26 +1,16 @@
-// import { Link } from 'react-router-dom';
 import { ToDo } from '../../models/todo-item';
-import classes from './ListItem.module.scss';
+
+import { ListItemLink } from './ListItem.styled';
 
 export const ListItem = ({ todo }: { todo: ToDo }) => {
     return (
-        <a
-            className={`${classes.link} ${todo.isDone ? classes.done : classes.notDone}`}
+        <ListItemLink
+            isDone={todo.isDone}
             target="_blank"
             rel="noreferrer"
             href={`/list/${todo.id}`}
         >
             {todo.text}
-        </a>
+        </ListItemLink>
     );
 };
-// export const ListItem = ({ todo }: { todo: ToDo }) => {
-//     return (
-//         <Link
-//             className={`${classes.link} ${todo.isDone ? classes.done : classes.notDone}`}
-//             to={`/list/${todo.id}`}
-//         >
-//             {todo.text}
-//         </Link>
-//     );
-// };
