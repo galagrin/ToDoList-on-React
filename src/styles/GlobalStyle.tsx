@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import normalize from 'styled-normalize';
+
 export const GlobalStyle = createGlobalStyle`
 ${normalize}
 * {
@@ -7,7 +8,8 @@ ${normalize}
 }
 
 body {
-    background-color: #edf0f1;
+    transition: background-color .2s;
+    background-color: ${(props) => props.theme.colors.backgroundSecondary};
     padding: 50px 0 0 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
